@@ -1,0 +1,19 @@
+Requirement for the Project 
+Installations
+!pip install sklearn Ñupgrade 
+!pip install keras
+!pip install tensorflow
+!pip install xgboost
+
+Import Libabries	
+
+from sklearn.linear_model import RidgeClassifier, LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+import pandas, xgboost, numpy, string
+import pandas as pd
+import numpy as np
+from keras.preprocessing import text, sequence
+from keras import layers, models, optimizers
