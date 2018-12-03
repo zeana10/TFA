@@ -15,7 +15,7 @@ Data Source
 -----------
 
 The dataset used in this project is a subset of the IMDb movie review dataset and has been obtained from this website - 
-<http://ai.stanford.edu/~amaas/data/sentiment/> . A review comes from one of the eight categories (class label). In the data, class label represents rating given by the user along with the review. There are four files, which have been uploaded in the GitHub repository as mentioned in the **Files** section below, viz. i) Train text ii) Train labels iii) Test text iv) Test labels. Text files contain one review in each line and label files contain the corresponding rating. 
+<http://ai.stanford.edu/~amaas/data/sentiment/> . A review comes from one of the eight categories (class label). In the data, class label represents rating given by the user along with the review. There are four files, which have can be downloaded from the link mentioned in the **Files** section below, viz. i) Train text ii) Train labels iii) Test text iv) Test labels. Text files contain one review in each line and label files contain the corresponding rating. 
 
 In the entire collection, no more than 30 reviews are allowed for any given movie because reviews for the same movie tend to have correlated ratings. Further, the train and test sets contain a disjoint set of movies, so no significant performance is obtained by memorizing movie-unique terms and their associated with observed labels.  In the labeled train/test sets, a negative review has a score <= 4 out of 10, and a positive review has a score >= 7 out of 10. Thus reviews with more neutral ratings are not included in the train/test sets.
 
@@ -43,19 +43,23 @@ After creating the required dataset, we have now started to fit it into differen
 4. XG Boost
 
 **Naive Bayes**
+
   a) We have used TF-IDF vectorizer for word level, ngram level and character level featuring. Multiple iterations were done to find      best estimate parameters.
   b) We have also used count-vectorizer for feature vectoring.
 	
 These feature vectors were fit to find the accuracy in each case.
 
 **Neural Network**
+
 We have used TF-IDF vectorizer for word level, ngram level and character level featuring. Multiple iterations were done to find best estimate parameters.
 These feature vectors were fit to find the accuracy in each case.
 
 **Random Forest Classifier**
+
 We have created a function to find the maximum parameters for maximum accuracy in tf-idf word level featuring. We found out maximum accuracy at 1000 features and implemented the RF classifier for that many features to find the accuracy.
 
 **XG Boost**
+
 We have taken the CPU count to utilize maximum CPU processing power, as this is very intensive algorithm. We have defined the classifier and set the parameters using grid search for XG Boost. We fitted the model to find best score, best parameter set and best estimator score.
 
 
@@ -63,32 +67,41 @@ Results
 -------
 
 We calculated the accuracy of our ratings predicted by different models. Giving the accuracy below for each model:
+
 Naive Bayes:
+
   1. Word_level : 39.5%
   2. Character : 39%
   3. N_Gram : 37.7%
   4. Count Vectorizer: 38.9%
+  
 Neural Networks:
+
   1. Word_level : 20.2%
   2. Character : 20.2%
   3. N_Gram : 20.2%
+  
 Random Forest Classifier:
+
   1. Word_level : 33.3% (maximum at max_features=1000)
   2. Count Vectorizer: 32.4%
+  
 XG Boost:
-     35.3% (maximum accuracy at learning_rate = 0.1, max_depth = 5, min_child_weight = 1 and best estimator score=0.349)
+
+  35.3%, Best Parameter Set (learning_rate = 0.1, max_depth = 5, min_child_weight = 1), Best estimator score=0.3495
 
 
 Files
 -----
-In the Github, we have the following files to be downloaded:
-
 Input Files: 
+Please find the following files at the link attached - <http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz>
   - imdb_test_text.txt
   - imdb_test_labels.txt
   - imdb_train_text.txt
   - imdb_train_labels.txt
   
+_In the Github, we have the following files to be downloaded:_
+
 Source Code:
   - TFA_Project_IMDb_Rating_Prediction.ipynb
 
@@ -100,10 +113,16 @@ Run Instructions
 ----------------
 
 1.In the requirements.txt file attached, check if all the packages are installed.
-2.Go to <https://github.com/zeana10/TFA.git>
-3.Go to Clone or Download. Download the zip file. From the multiple iPython notebooks, select the final merged source code–TFA_Project_IMDb_Rating_Prediction.ipynb.
-4. Upload the file on Anaconda Jupyter Notebook. Change the path in the pandas.read_table function for both test and train data.
-5. Open the file and run all the individual cells of the file in an ordered fashion.
+
+2. Download the train and test data set as mentioned in the **Files** section above. 
+
+3.Go to <https://github.com/zeana10/TFA.git>
+
+4. Go to Clone or Download. Download the zip file. From the multiple iPython notebooks, select the final merged source code–TFA_Project_IMDb_Rating_Prediction.ipynb.
+
+5. Upload the file on Anaconda Jupyter Notebook. Change the path in the pandas.read_table function for both test and train data.
+
+6. Open the file and run all the individual cells of the file in an ordered fashion.
   
 Bibliography
 ------------ 
