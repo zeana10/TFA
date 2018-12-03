@@ -1,11 +1,11 @@
 Requirement for the Project 
 Installations
-!pip install sklearn Ñupgrade 
-!pip install keras
-!pip install tensorflow
-!pip install xgboost
+Installing scikit-learn- !pip install sklearn 
+Installing keras- !pip install keras
+Installing Tensorflow- !pip install tensorflow
+Installing Xgboost- !pip install xgboost
 
-Import Libabries	
+Libraries to be imported
 
 from sklearn.linear_model import RidgeClassifier, LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
