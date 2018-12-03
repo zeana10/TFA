@@ -9,3 +9,16 @@ Introduction
 IMDb, an acronym for Internet Movie Database, is an online database of information related to world films, television programs, home videos and video games, and internet streams, including cast, production crew, and personal biographies. It has approximately 5.3 million titles, 83 million registered users, and millions of reviews. Many of the reviews on the website have no ratings, and these reviews are not accounted for while calculating the mean ratings. Our dataset comprises of 25000 such reviews.
 
 The objective of this project is to compute the ratings based on the reviews if the given reviewer has not rated the movie. This can also be used by IMDb to validate the scores given by a registered user based on their reviews.
+
+
+## Files:
+In the Github, we have the following files to be downloaded:
+
+Input Files: 
+  - imdb_test_text.txt
+  - imdb_test_labels.txt
+  - imdb_train_text.txt
+  - imdb_train_labels.txt
+Source Code:
+  - TFA_Project_IMDb_Rating_Prediction.ipynb
+requirements.txt -- specifies which packages to be installed and imported
